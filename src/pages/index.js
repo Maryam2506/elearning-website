@@ -1,5 +1,12 @@
 import React from "react"
 
-export default function Home() {
-  return <div>Hello world!</div>
+// Other Component
+import NavBar from "../components/Navbar/Navbar"
+
+// CSS imported
+import "./index.module.css"
+
+const Home = () => {
+  return <NavBar />
 }
+export default Home

@@ -1,0 +1,54 @@
+import React from "react"
+import styled from "styled-components"
+import { Link } from "gatsby"
+
+const NavItem = styled(Link)`
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  display: inline-block;
+  white-space: nowrap;
+  margin: 0 1vw;
+  transition: all 200ms ease-in;
+  position: relative;
+
+  :after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 0%;
+    content: ".";
+  }
+
+  :hover {
+    color: #838c48;
+    ::after {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px 0;
+    font-size: 1.5rem;
+    z-index: 6;
+  }
+`
+const NavbarLinks = () => {
+  return (
+    <>
+      <NavItem to="/">Home</NavItem>
+      <NavItem to="/404">Courses</NavItem>
+      <NavItem to="/404">ShortCOdes</NavItem>
+      <NavItem to="/">Pages</NavItem>
+      <div class="header-register">
+        
+        <NavItem to="/" title="Login / Register Now">
+          Login<span> | </span>
+          Register
+        </NavItem>
+      </div>
+    </>
+  )
+}
+
+export default NavbarLinks
