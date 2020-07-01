@@ -2,10 +2,16 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
+// DropDown CSS used
+import style from "./DropDown.module.css"
+
+// react-icons library
+import { FaUserAlt, FaCaretDown, FaShoppingCart } from "react-icons/fa"
+
 const NavItem = styled(Link)`
   text-decoration: none;
-  font-weight: 600;
-  color: #111;
+  color: #197da8;
+  font-weight: 550;
   display: inline-block;
   white-space: nowrap;
   margin: 0 1vw;
@@ -14,14 +20,17 @@ const NavItem = styled(Link)`
 
   :after {
     position: absolute;
+    bottom: 0;
     left: 0;
     right: 0;
     width: 0%;
-    content: ".";
+    content: "";
+    color: transparent;
+    transition: all 0.4s ease-in;
   }
 
   :hover {
-    color: #838c48;
+    color: black;
     ::after {
       width: 100%;
     }
@@ -29,24 +38,50 @@ const NavItem = styled(Link)`
 
   @media (max-width: 768px) {
     padding: 20px 0;
-    font-size: 1.5rem;
+    font-size: 1rem;
     z-index: 6;
   }
 `
+
 const NavbarLinks = () => {
   return (
     <>
-      <NavItem to="/">Home</NavItem>
+      <NavItem to="/404">Home</NavItem>
+      <NavItem to="/404">About</NavItem>
       <NavItem to="/404">Courses</NavItem>
-      <NavItem to="/404">ShortCOdes</NavItem>
-      <NavItem to="/">Pages</NavItem>
-      <div class="header-register">
-        
-        <NavItem to="/" title="Login / Register Now">
-          Login<span> | </span>
-          Register
+      <div className={style.dropdown}>
+        <NavItem to="/404">
+          Pages
+          <FaCaretDown />
         </NavItem>
+        <div className={style.menus}>
+          <NavItem to="/">Element 1</NavItem>
+          <NavItem to="/">Element 2</NavItem>
+          <NavItem to="/">Element 3</NavItem>
+        </div>
       </div>
+      <div className={style.dropdown}>
+        <NavItem to="/">
+          Blog
+          <FaCaretDown />
+        </NavItem>
+        <div className={style.menus}>
+          <NavItem to="/">Element 1</NavItem>
+          <NavItem to="/">Element 2</NavItem>
+        </div>
+      </div>
+      <NavItem to="/">Contact</NavItem>
+      <div style={{ borderStyle: "groove", padding: "1%" }}>
+        {" "}
+        <NavItem to="/">
+          {" "}
+          <FaUserAlt /> Login<span> | </span> Register{" "}
+        </NavItem>{" "}
+      </div>
+      <NavItem to="/">
+        {" "}
+        <FaShoppingCart title="Cart" />
+      </NavItem>
     </>
   )
 }

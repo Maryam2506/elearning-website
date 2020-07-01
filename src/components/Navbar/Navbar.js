@@ -1,25 +1,27 @@
-import React, { useState } from "react"
-import styled from "styled-components"
+import React, { useState} from "react"
 
-// Other Components
+import styled from "styled-components"
 import NavbarLinks from "./NavbarLinks"
 import Logo from "./Logo"
 
+
 const Navigation = styled.nav`
-  height: 18vh;
+  height: 12vh;
   display: flex;
-  background: transparent;
-  position: relative;
+  /* background: #ffffff52; */
+  position: fixed;
   justify-content: space-between;
-  text-transform: uppercase;
+  /* border-bottom: 2px solid #33333320; */
+  top: 0;
+  left: 0;
   margin: 0 auto;
-  padding: 0 5vw;
   z-index: 2;
+  width: 100%;
   align-self: center;
 
   @media (max-width: 768px) {
     position: sticky;
-    height: 13vh;
+    height: 15vh;
     top: 0;
     left: 0;
     right: 0;
@@ -31,7 +33,6 @@ const Toggle = styled.div`
   display: none;
   height: 100%;
   cursor: pointer;
-  padding: 0 10vw;
 
   @media (max-width: 768px) {
     display: flex;
@@ -45,13 +46,14 @@ const Navbox = styled.div`
   align-items: center;
 
   @media (max-width: 768px) {
+    text-align: center;
     flex-direction: column;
     position: fixed;
-    width: 100%;
+    width: 50%;
     justify-content: flex-start;
-    padding-top: 10vh;
+    background-color: #fffffff0;
     transition: all 0.3s ease-in;
-    top: 10vh;
+
     left: ${props => (props.open ? "-100%" : "0")};
   }
 `
@@ -60,7 +62,8 @@ const Hamburger = styled.div`
   background-color: #111;
   width: 30px;
   height: 3px;
-  transition: all .3s linear;
+  margin: 0 25px;
+  transition: all 0.3s linear;
   align-self: center;
   position: relative;
   transform: ${props => (props.open ? "rotate(-45deg)" : "inherit")};
@@ -90,8 +93,9 @@ const Hamburger = styled.div`
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
 
+
   return (
-    <Navigation>
+    <Navigation >
       <Logo />
       <Toggle
         navbarOpen={navbarOpen}

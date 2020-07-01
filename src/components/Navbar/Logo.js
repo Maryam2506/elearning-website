@@ -6,6 +6,7 @@ import { Link } from "gatsby"
 import logo from "../../images/logo.png"
 
 const LogoWrap = styled.div`
+position:relative;
   margin: auto 0;
   flex: 0 1 35px;
 
@@ -18,7 +19,7 @@ const LogoWrap = styled.div`
 const Logo = () => {
   return (
     <LogoWrap as={Link} to="/">
-      <img src={logo} width={"79"} />
+      <img src={logo} width={"100"} alt="logo" />
     </LogoWrap>
   )
 }
