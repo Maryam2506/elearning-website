@@ -6,7 +6,11 @@ import { Link } from "gatsby"
 import style from "./DropDown.module.css"
 
 // react-icons library
-import { FaUserAlt, FaCaretDown, FaShoppingCart } from "react-icons/fa"
+import { 
+  // FaUserAlt, 
+  FaCaretDown, 
+  FaShoppingCart, 
+  FaUserCircle } from "react-icons/fa"
 
 const NavItem = styled(Link)`
   text-decoration: none;
@@ -71,13 +75,14 @@ const NavbarLinks = () => {
         </div>
       </div>
       <NavItem to="/">Contact</NavItem>
-      <div style={{ borderStyle: "groove", padding: "1%" }}>
+      {/* <div style={{ borderStyle: "groove", padding: "1%" }}>
         {" "}
         <NavItem to="/">
           {" "}
           <FaUserAlt /> Login<span> | </span> Register{" "}
         </NavItem>{" "}
-      </div>
+      </div> */}
+      <NavItem to="/">  <FaUserCircle style={{ color:"black"}} title="Resigtor | login"/>  </NavItem>
       <NavItem to="/">
         {" "}
         <FaShoppingCart title="Cart" />
