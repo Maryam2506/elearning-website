@@ -2,7 +2,7 @@ body {
   font-family: "Open Sans", sans-serif;
   background-image: linear-gradient(
       rgba(179, 183, 206, 0.5),
-      rgba(181, 181, 192, 0.589) 50%
+      rgba(181, 181, 192, 0.301) 50%
     ),
     url("../../images/FullScreen.jpg");
   background-attachment: fixed;
