@@ -75,6 +75,7 @@ const NavbarLinks = () => {
         </div>
       </div>
       <NavItem to="/">Contact</NavItem>
+
       {/* <div style={{ borderStyle: "groove", padding: "1%" }}>
         {" "}
         <NavItem to="/">
@@ -82,6 +83,7 @@ const NavbarLinks = () => {
           <FaUserAlt /> Login<span> | </span> Register{" "}
         </NavItem>{" "}
       </div> */}
+      
       <NavItem to="/">  <FaUserCircle style={{ color:"black"}} title="Resigtor | login"/>  </NavItem>
       <NavItem to="/">
         {" "}

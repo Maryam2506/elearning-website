@@ -12,7 +12,11 @@ position:relative;
 
 
 
-  @media (max-width: 768px) and (orientation: landscape) {
+  @media (max-width: 768px) {
+    img{
+      width: 70px;
+    }
+  
     flex: 0 1 25px;
   }
 `

@@ -7,20 +7,22 @@ body {
     url("../../images/FullScreen.jpg");
   background-attachment: fixed;
   background-size: cover;
-  height: 500vh;
+  height: 100vh;
  margin:0 auto;
 }
 
 .homeContent {
-  margin: 195px;
+  margin: 180px;
   text-align: center;
+  /* line-height: 24px; */
+
  
 }
 
 /* MainHeading */
 
 .homeContent h1 {
-  margin: 10px;
+
   color: #ffffff;
   font-size: 36px;
   text-transform: uppercase;
@@ -30,7 +32,7 @@ body {
 /* SubHeading */
 
 .homeContent p {
-  margin: 10px;
+
   color: #0d2856;
   font-size: 18px;
   font-weight: 600;
@@ -61,29 +63,20 @@ body {
   color: rgb(252, 253, 253);
 }
 
-/*On Scroll  Work*/
-.defaultscroll {
-  background-color: transparent;
-}
-.uponscroll {
-  background-color: #DBD5CB;
-}
-.bg.scrolled {
-  background-color: #DBD5CB;
-}
+
 
 @media (max-width: 768px) {
   .homeContent {
-    margin: 12px;
+    margin: 100px;
+   
   }
+
   .homeContent h1 {
-    font-size: 20px;
+    font-size: 18px;
   }
   .homeContent p {
-    font-size: 14px;
+    font-size: 10px;
+    
   }
-  .stared,
-  .more {
-    padding: 9px 30px;
-  }
+ 
 }

@@ -1,17 +1,17 @@
-import React, { useState} from "react"
-
+import React, { useState, useRef, useEffect} from "react"
 import styled from "styled-components"
 import NavbarLinks from "./NavbarLinks"
 import Logo from "./Logo"
-
+import style from './DropDown.module.css';
+import cx from "classnames"
 
 const Navigation = styled.nav`
   height: 12vh;
   display: flex;
-  /* background: #ffffff52; */
+ 
   position: fixed;
   justify-content: space-between;
-  /* border-bottom: 2px solid #33333320; */
+
   top: 0;
   left: 0;
   margin: 0 auto;
@@ -20,8 +20,8 @@ const Navigation = styled.nav`
   align-self: center;
 
   @media (max-width: 768px) {
-    position: sticky;
-    height: 15vh;
+    position: fixed;
+    height: 7vh;
     top: 0;
     left: 0;
     right: 0;
@@ -92,10 +92,27 @@ const Hamburger = styled.div`
 `
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
+  const [navBackground, setNavBackground] = useState(false)
 
+  const navRef = useRef()
+  navRef.current = navBackground
+  useEffect(() => {
+    const handleScroll = () => {
+      const show = window.scrollY > 120
+      if (navRef.current !== show) {
+        setNavBackground(show)
+      }
+    }
+    document.addEventListener("scroll", handleScroll)
+    return () => {
+      document.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
 
   return (
-    <Navigation >
+    <Navigation   className={cx(
+      navBackground ? style.uponscroll : style.defaultscroll
+    )}>
       <Logo />
       <Toggle
         navbarOpen={navbarOpen}
