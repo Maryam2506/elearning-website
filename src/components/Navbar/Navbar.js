@@ -21,7 +21,7 @@ const Navigation = styled.nav`
 
   @media (max-width: 768px) {
     position: fixed;
-    height: 7vh;
+    height: 11vh;
     top: 0;
     left: 0;
     right: 0;
@@ -59,7 +59,7 @@ const Navbox = styled.div`
 `
 
 const Hamburger = styled.div`
-  background-color: #111;
+  background-color: #197da8;
   width: 30px;
   height: 3px;
   margin: 0 25px;
@@ -98,7 +98,7 @@ const Navbar = () => {
   navRef.current = navBackground
   useEffect(() => {
     const handleScroll = () => {
-      const show = window.scrollY > 120
+      const show = window.scrollY > 50
       if (navRef.current !== show) {
         setNavBackground(show)
       }
@@ -114,14 +114,14 @@ const Navbar = () => {
       navBackground ? style.uponscroll : style.defaultscroll
     )}>
       <Logo />
-      <Toggle
+      <Toggle 
         navbarOpen={navbarOpen}
         onClick={() => setNavbarOpen(!navbarOpen)}
       >
         {navbarOpen ? <Hamburger open /> : <Hamburger />}
       </Toggle>
       {navbarOpen ? (
-        <Navbox>
+        <Navbox >
           <NavbarLinks />
         </Navbox>
       ) : (

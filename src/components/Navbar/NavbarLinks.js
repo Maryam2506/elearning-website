@@ -50,11 +50,14 @@ const NavItem = styled(Link)`
 const NavbarLinks = () => {
   return (
     <>
-      <NavItem to="/404">Home</NavItem>
-      <NavItem to="/404">About</NavItem>
-      <NavItem to="/404">Courses</NavItem>
+      <NavItem to="/">Home</NavItem>
+      <NavItem to="/">About</NavItem>
+      <NavItem to="/">Courses</NavItem>
+
+      {/* Drop Down Work */} 
+
       <div className={style.dropdown}>
-        <NavItem to="/404">
+        <NavItem className={style.link} to="/">
           Pages
           <FaCaretDown />
         </NavItem>
@@ -65,7 +68,7 @@ const NavbarLinks = () => {
         </div>
       </div>
       <div className={style.dropdown}>
-        <NavItem to="/">
+        <NavItem className={style.link}  to="/">
           Blog
           <FaCaretDown />
         </NavItem>
@@ -75,6 +78,8 @@ const NavbarLinks = () => {
         </div>
       </div>
       <NavItem to="/">Contact</NavItem>
+
+ {/*......................Drop Down Work End.......................*/} 
 
       {/* <div style={{ borderStyle: "groove", padding: "1%" }}>
         {" "}
