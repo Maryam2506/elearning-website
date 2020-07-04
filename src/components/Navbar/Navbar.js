@@ -51,7 +51,7 @@ const Navbox = styled.div`
     position: fixed;
     width: 50%;
     justify-content: flex-start;
-    background-color: #fffffff0;
+    background-color: #116466;
     transition: all 0.3s ease-in;
 
     left: ${props => (props.open ? "-100%" : "0")};
@@ -59,7 +59,7 @@ const Navbox = styled.div`
 `
 
 const Hamburger = styled.div`
-  background-color: #197da8;
+  background-color: #D1E8E2;
   width: 30px;
   height: 3px;
   margin: 0 25px;
@@ -72,7 +72,7 @@ const Hamburger = styled.div`
   ::after {
     width: 30px;
     height: 3px;
-    background-color: #111;
+    background-color: #116466;
     content: "";
     position: absolute;
     transition: all 0.3s linear;

@@ -14,7 +14,7 @@ import {
 
 const NavItem = styled(Link)`
   text-decoration: none;
-  color: #197da8;
+  color: #D1E8E2;
   font-weight: 550;
   display: inline-block;
   white-space: nowrap;
@@ -34,7 +34,7 @@ const NavItem = styled(Link)`
   }
 
   :hover {
-    color: black;
+    color: #FFCB9A;
     ::after {
       width: 100%;
     }
@@ -89,7 +89,7 @@ const NavbarLinks = () => {
         </NavItem>{" "}
       </div> */}
       
-      <NavItem to="/">  <FaUserCircle style={{ color:"black"}} title="Resigtor | login"/>  </NavItem>
+      <NavItem to="/">  <FaUserCircle style={{ color:"#FFCB9A"}} title="Resigtor | login"/>  </NavItem>
       <NavItem to="/">
         {" "}
         <FaShoppingCart title="Cart" />

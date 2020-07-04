@@ -1,29 +1,17 @@
 body {
   font-family: "Open Sans", sans-serif;
-  background-image: linear-gradient(
-      rgba(179, 183, 206, 0.5),
-      rgba(181, 181, 192, 0.301) 50%
-    ),
-    url("../../images/FullScreen.jpg");
-  background-attachment: fixed;
-  background-size: cover;
-  height: 98vh;
- margin:0 auto;
 }
 
 .homeContent {
   margin: 180px;
   text-align: center;
   /* line-height: 24px; */
-
- 
 }
 
 /* MainHeading */
 
-.homeContent h1 {
-
-  color: #ffffff;
+.homeContent h2 {
+  color: #d1e8e2;
   font-size: 36px;
   text-transform: uppercase;
   text-shadow: 2px 2px 4px #310e0e;
@@ -32,8 +20,7 @@ body {
 /* SubHeading */
 
 .homeContent p {
-
-  color: #0d2856;
+  color: #116466;
   font-size: 18px;
   font-weight: 600;
 }
@@ -42,41 +29,75 @@ body {
 
 .homeContent .stared,
 .more {
+  position: relative;
   padding: 10px 35px;
   margin: 3px;
   border: 2px solid transparent;
   border-radius: 3px;
-  transition: all 0.2s;
 }
+
 .homeContent .stared:hover,
 .more:hover {
-  opacity: 0.7;
   cursor: pointer;
 }
+
 .homeContent .stared {
-  background: #ffffff;
-  color: rgb(50, 50, 105);
+  background: #d1e8e2;
+  color: #2c3531;
+  animation: leftMove 2s normal forwards ease-in-out;
+}
+.homeContent .stared:hover {
+  background: #116466;
+  color: #d1e8e2;
 }
 
 .homeContent .more {
-  background: rgb(50, 50, 105);
-  color: rgb(252, 253, 253);
+  background: #2c3531;
+  color: #d1e8e2;
+  animation: rightMove 2s normal forwards ease-in-out;
+}
+.homeContent .more:hover {
+  background: #ffcb9a;
+  color: #2c3531;
 }
 
+@keyframes leftMove {
+  from {
+    opacity: 0;
+    left: -500px;
+  }
+  to {
+    opacity: 1;
+    left: 0;
+  }
+}
 
+@keyframes rightMove {
+  from {
+    opacity: 0;
+    right: -500px;
+  }
+  to {
+    opacity: 1;
+    right: 0;
+  }
+}
 
 @media (max-width: 768px) {
   .homeContent {
     margin: 100px;
-   
   }
 
-  .homeContent h1 {
+  .homeContent h2 {
     font-size: 18px;
   }
   .homeContent p {
     font-size: 10px;
-    
+    line-height: 16px;
   }
- 
+
+  .homeContent .stared,
+  .more {
+    margin-top: 5px;
+  }
 }

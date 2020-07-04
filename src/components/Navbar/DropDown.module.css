@@ -5,7 +5,7 @@
 
 
 .dropdown div {
-  background-color: #fff;
+  background-color: #D1E8E2;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1;
   visibility: hidden;
@@ -23,21 +23,21 @@
 
 }
 .dropdown:hover .link{
-  color:black
+  color: #FFCB9A;
 }
 
 .dropdown div a {
   display: block;
   text-decoration: none;
   padding: 8px;
-  color: #197da8;
+  color: #116466;
   transition: 0.1s;
   white-space: nowrap;
 }
 
 .dropdown div a:hover {
-  background-color: rgba(38, 38, 130, 0.82);
-  color: #fff;
+  background-color: #116466;
+  color:#D1E8E2;
 }
 
 
@@ -47,7 +47,7 @@
 }
 .uponscroll {
   transition:  all 0.2s ease-in;
-   background: #fffffff5; 
+   background: #116466; 
    border-bottom: 2px solid #33333320;
 }
 
