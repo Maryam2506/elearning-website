@@ -17,7 +17,7 @@
     "babel-plugin-styled-components": "^1.10.7",
     "classnames": "^2.2.6",
     "core-js": "^3",
-    "gatsby": "^2.23.10",
+    "gatsby": "^2.32.13",
     "gatsby-cli": "^2.12.58",
     "gatsby-plugin-styled-components": "^3.3.6",
     "npm-check-updates": "^7.0.1",
